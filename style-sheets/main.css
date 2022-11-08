@@ -1,0 +1,93 @@
+body {
+  background-color: #333;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+nav ul li {
+  float: left;
+  font-size: 20px;
+}
+nav ul li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: white;
+}
+header {
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  vertical-align: center;
+}
+#main-image img {
+  width: 100%;
+  filter: brightness(50%);
+}
+#title-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration-line: underline;
+  text-underline-offset: 1rem;
+}
+#title-description {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 62%;
+  color: white;
+  font-weight: bold;
+  left: 50%;
+}
+.divider {
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+}
+.treaty-description-card {
+  background-color: #ffffff;
+  margin: 5px 0px;
+  width: 45%;
+  float: left;
+  padding-left: 50px;
+}
+#treaty-description-panel {
+  background-color: #ffffff;
+  height: 400px;
+}
+.treaty-description-card h2 {
+  margin: 0px 0px;
+  text-align: center;
+}
+.treaty-description-card.right h2,
+.treaty-description-card.right p {
+  text-align: center;
+}
+#treaty-map {
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+#timeline-container {
+  background-color: white;
+}
+#timeline-container h2,
+#timeline-container h6 {
+  margin: 0;
+  text-align: center;
+}
