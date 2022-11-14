@@ -1,9 +1,13 @@
+/*Targets whole body, removing the 10px margin along the side, setting the background colour to gray,
+font family is sans-serif.*/
 body {
   background-color: #333;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Navingation Bar */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -26,16 +30,15 @@ a:hover {
   color: black;
   background-color: white;
 }
-header {
-  background-color: white;
-  border: 2px solid black;
-  text-align: center;
-  vertical-align: center;
-}
+
+/*Background Image*/
 #main-image img {
   width: 100%;
+  /*Makes the image dimmer*/
   filter: brightness(50%);
 }
+
+/*Positions the title text over the background image, and underlines.*/
 #title-text {
   position: absolute;
   top: 50%;
@@ -47,6 +50,7 @@ header {
   text-decoration-line: underline;
   text-underline-offset: 1rem;
 }
+/* Positions title description under title text and over background image */
 #title-description {
   transform: translate(-50%, -50%);
   position: absolute;
@@ -55,39 +59,26 @@ header {
   font-weight: bold;
   left: 50%;
 }
+/*divider (not too much going on here)*/
 .divider {
   height: 50px;
-  background-color: rgb(0, 0, 0);
+  background-color: #202020;
 }
-.treaty-description-card {
-  background-color: #ffffff;
-  margin: 5px 0px;
-  width: 45%;
-  float: left;
-  padding-left: 50px;
+/* Footer */
+#footer {
+  border-top: 5px solid #333;
+  background-color: #202020;
+  height: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-#treaty-description-panel {
-  background-color: #ffffff;
-  height: 400px;
+#footer a:hover {
+  color: black;
 }
-.treaty-description-card h2 {
-  margin: 0px 0px;
-  text-align: center;
-}
-.treaty-description-card.right h2,
-.treaty-description-card.right p {
-  text-align: center;
-}
-#treaty-map {
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-}
-#timeline-container {
-  background-color: white;
-}
-#timeline-container h2,
-#timeline-container h6 {
+#footer p {
+  position: relative;
   margin: 0;
+  top: 50%;
+  transform: translateY(-130%);
   text-align: center;
+  color: white;
 }
