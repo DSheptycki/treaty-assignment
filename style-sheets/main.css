@@ -7,7 +7,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navingation Bar */
+/* Navigation Bar */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -74,11 +74,11 @@ a:hover {
 #footer a:hover {
   color: black;
 }
-#footer p {
+#copy-text {
   position: relative;
   margin: 0;
   top: 50%;
-  transform: translateY(-130%);
+  transform: translateY(-200%);
   text-align: center;
   color: white;
 }
