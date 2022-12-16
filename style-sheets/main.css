@@ -2,14 +2,16 @@
 html {
   font-size: 62.5%;
 }
-/*Targets whole body, removing the 10px margin along the side, setting the background colour to a linear gradient of green to darker green,
+/*Targets whole body, removing the 10px margin along the side, setting the background colour to a linear gradient of light green to darker green,
 font family is serif, text colour is dark green.*/
 body {
-  background-image: linear-gradient(to bottom, #def5e5, #b0c0b58a);
+  background-image: linear-gradient(to bottom, #faffd1, #a1ffa9);
   height: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.6rem;
+  line-height: 2.24rem;
+  letter-spacing: normal;
   color: #285430;
 }
 
@@ -101,7 +103,6 @@ nav a:focus {
 /* Footer */
 #footer {
   bottom: 0;
-  margin-top: 800px;
   background-color: #202020;
   height: 70px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

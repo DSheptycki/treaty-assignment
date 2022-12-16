@@ -3,7 +3,7 @@ Danny Sheptycki
 Software Development 20S
 Mr. Hardman
 Pembina Trails Early College
-11/14/2022
+12/6/2022
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +16,13 @@ Pembina Trails Early College
     <!--Linking External CSS File to index.html-->
     <link rel="stylesheet" href="style-sheets/main.css" />
     <style>
+      /*paragraph styled in internal style sheet because its only intended to affect this webpage.*/
       p {
-        font-size: 20px;
+        font-size: 2rem;
       }
+      /* Styling for the 3 treaty description cards */
       .treaty-description-card {
-        background-color: #202020;
+        background-color: #def5e5;
         margin: 5px 0px;
         width: 30%;
         float: left;
@@ -28,23 +30,17 @@ Pembina Trails Early College
         padding-right: 25px;
         margin: 0px 0px;
         text-align: center;
-        color: rgba(255, 255, 255, 0.87);
+        color: rgba(0, 0, 0, 0.87);
       }
+      /* Styling for the panel which holds the 3 treaty description cards */
       #treaty-description-panel {
-        background-color: #202020;
-        color: rgba(255, 255, 255, 0.87);
+        background-color: #def5e5;
+        color: rgba(0, 0, 0, 0.87);
         height: 320px;
       }
+      /*styling for the map showing the treaty land covered*/
       #treaty-map {
         border: 5px solid #333;
-      }
-      #timeline-container {
-        background-color: rgb(255, 255, 255);
-      }
-      #timeline-container h2,
-      #timeline-container h6 {
-        margin: 0;
-        text-align: center;
       }
     </style>
   </head>
@@ -53,6 +49,7 @@ Pembina Trails Early College
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="treaty-terms.html">Treaty Details</a></li>
       </ul>
     </nav>
 
@@ -70,7 +67,7 @@ Pembina Trails Early College
     </header>
 
     <!--Black bar to divide the content-->
-    <div class="divider"></div>
+    <div class="divider" style="margin-top: 5px"></div>
 
     <!--Main containing all content related to the numbered treatys.-->
     <main>
@@ -90,13 +87,14 @@ Pembina Trails Early College
         </div>
         <!--Div containing a image of the land treaty 1 covers.-->
         <div class="treaty-description-card">
-          <a target="_blank" href="images/treaty-one.png">
-            <img
-              src="images/treaty-one.png"
-              id="treaty-map"
-              width="100%"
-              alt="Map showing what land the 1st and 2nd treaty coveres in manitoba" />
-          </a>
+          <img
+            src="images/treaty-one.png"
+            id="treaty-map"
+            width="100%"
+            alt="Map showing what land the 1st and 2nd treaty coveres in manitoba"
+            onclick="expandImg()"
+            onkeydown="expandImg()"
+            tabindex="0" />
         </div>
         <!--Div describing where/who the treaty was signed by-->
         <div class="treaty-description-card right">
@@ -113,25 +111,6 @@ Pembina Trails Early College
 
       <!--Black bar to divide the content-->
       <div class="divider" style="border-bottom: 5px solid #333"></div>
-      <!--Section containing timeline of historic events-->
-      <section id="timeline-container">
-        <h2>A History Of The Treaty's</h2>
-        <!--Link to the timeline's source-->
-        <h6>
-          <a
-            href="http://www.otc.ca/resource/purchase/treaty_timeline.html?page=5"
-            target="none"
-            style="color: black"
-            >Source for timeline image</a
-          >
-        </h6>
-        <a target="_blank" href="images/treaty-timeline.png">
-          <img
-            src="images/treaty-timeline.png"
-            width="100%"
-            alt="descriptive timeline of historic events ranging from 1000 AD to 2006 about the singing of the numbered treatys" />
-        </a>
-      </section>
     </main>
     <footer id="footer">
       <a
@@ -139,9 +118,46 @@ Pembina Trails Early College
         class="link"
         style="color: rgba(255, 255, 255, 0.6)"
         target="_blank"
-        >Source 1</a
+        >Click this link to go to the treaty one website (Source 1)</a
       >
-      <p id="copy-text">&copy;2022 Daniel Sheptycki</p>
+      <br />
+      <a
+        href="https://www.thecanadianencyclopedia.ca/en/article/treaties-1-and-2"
+        class="link"
+        style="color: rgba(255, 255, 255, 0.6)"
+        target="_blank"
+        >Click this link to go to the TheCanadianEncyclopedia website (Source
+        2)</a
+      >
+      <br />
+      <a
+        href="https://www.winnipegvitalsigns.org/vital-information/treaty-1/"
+        class="link"
+        style="color: rgba(255, 255, 255, 0.6)"
+        target="_blank"
+        >Click this link to go to winnipeg vital sings website (Source 3)</a
+      >
+      <button onclick="resetImg()" style="float: right">Reset Image</button>
     </footer>
+    <!--Javascript to expand the treaty map image-->
+    <script>
+      // Get the img object using its Id
+      img = document.getElementById("treaty-map");
+
+      function expandImg() {
+        // Set image size to 1.5 times original
+        img.style.transform = "scale(1.5)";
+        // Animation effect
+        img.style.transition = "transform 0.25s ease";
+        imgExpanded = true;
+      }
+      // Function to reset image size
+      function resetImg() {
+        // Set image size to original
+        img.style.transform = "scale(1)";
+        img.style.transition = "transform 0.25s ease";
+        imgExpanded = false;
+      }
+    </script>
   </body>
 </html>
