@@ -5,7 +5,6 @@ html {
 /*Targets whole body, removing the 10px margin along the side, setting the background colour to a linear gradient of light green to darker green,
 font family is serif, text colour is dark green.*/
 body {
-  background-image: linear-gradient(to bottom, #faffd1, #a1ffa9);
   height: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -29,7 +28,6 @@ nav ul {
   background-color: #2c2c2c;
 
   /*Creates a small border (space bordering the object) on the bottom of the navigation bar */
-  border-bottom: 5px solid#333;
 }
 nav ul li {
   /* floats the links next to each other aligning them left of one another */
@@ -59,6 +57,7 @@ nav a:focus {
 #main-image img {
   width: 100%;
   /*Makes the image dimmer*/
+  -webkit-filter: brightness(50%);
   filter: brightness(50%);
 }
 
@@ -69,6 +68,10 @@ nav a:focus {
   /*Positions the text in the abesolute center*/
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
   /* Text shadow to emphasize Title Text */
@@ -80,12 +83,18 @@ nav a:focus {
   /* sets font size */
   font-size: 5rem;
   /* underlines the text and offsets the underline so its further below the text than usual */
+  -webkit-text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
   text-decoration-line: underline;
   text-underline-offset: 1.5rem;
 }
 /* Positions title description under title text and over background image */
 #title-description {
   /*Positions the text in the center of the horizontal axis*/
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
   /* sets the text slightly below the title */
