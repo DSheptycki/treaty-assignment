@@ -1,6 +1,7 @@
 /*Sets font size so rem is able to be used instead of px which makes the website more accessible*/
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 /*Targets whole body, removing the 10px margin along the side, setting the background colour to a linear gradient of light green to darker green,
 font family is serif, text colour is dark green.*/
@@ -45,6 +46,14 @@ nav ul li a {
   /* creates padding inside the box */
   padding: 14px 16px;
   text-decoration: none;
+  /* Transition for when link is hovered */
+  -o-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -moz-transitions: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -webkit-transition: background-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
+  -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 }
 /* When the link is being hovered over with a mouse or a screen reader it inverts text and background color */
 nav a:hover,
